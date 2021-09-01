@@ -38,7 +38,7 @@ endif
 
 DIR = $(shell pwd)
 
-APP = appserver appclient sendfile recvfile test hello_server hello_client # add new file app here
+APP = appserver appclient sendfile recvfile test# add new file app here
 
 all: $(APP)
 
@@ -54,12 +54,6 @@ sendfile: sendfile.o
 recvfile: recvfile.o
 	$(C++) $^ -o $@ $(LDFLAGS)
 test: test.o
-	$(C++) $^ -o $@ $(LDFLAGS)
-
-hello_server: hello_server.o
-	$(C++) $^ -o $@ $(LDFLAGS)
-
-hello_client: hello_client.o
 	$(C++) $^ -o $@ $(LDFLAGS)
 
 clean:
